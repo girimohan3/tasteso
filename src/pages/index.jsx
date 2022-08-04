@@ -1,4 +1,5 @@
 export { default as Home } from './Home';
+export { default as Map } from './Map';
 export { default as Kanban } from './Kanban';
 export { default as Orders } from './Orders';
 export { default as Employees } from './Employees';

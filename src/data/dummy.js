@@ -1,6 +1,6 @@
 import React from 'react';
-import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart, FiHome } from 'react-icons/fi';
+import { AiOutlineCalendar, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
+import { FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart, FiHome, FiMapPin, } from 'react-icons/fi';
 import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
 import { BiColorFill } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
@@ -8,7 +8,7 @@ import { RiContactsLine, RiStockLine } from 'react-icons/ri';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { TiTick } from 'react-icons/ti';
-import { GiLouvrePyramid } from 'react-icons/gi';
+import { GiLouvrePyramid, GiFireBowl } from 'react-icons/gi';
 import { GrLocation } from 'react-icons/gr';
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
@@ -21,7 +21,6 @@ import product4 from './product4.jpg';
 import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
-import product8 from './product8.jpg';
 import food1 from './food1.png';
 import food2 from './food2.png';
 import food3 from './food3.png';
@@ -33,7 +32,7 @@ export const verticalSlide = [
   {
     id: 1,
     image: food1,
-    link: "www.tasteso.com",
+    link: "https://www.tasteso.com,"
   },
   {
     id: 2,
@@ -514,7 +513,13 @@ export const links = [
       {
         name: 'Home',
         icon: <FiHome />,
+        link: ''        
       },
+      {
+        name: 'Food Map',
+        icon: <FiMapPin />,
+        link: 'map'
+      }
     ],
   },
 
@@ -522,16 +527,19 @@ export const links = [
     title: 'Pages',
     links: [
       {
-        name: 'orders',
-        icon: <AiOutlineShoppingCart />,
+        name: 'Trending Food',
+        icon: <GiFireBowl/>,
+        link: 'orders'
       },
       {
         name: 'employees',
         icon: <IoMdContacts />,
+        link: 'employees'
       },
       {
         name: 'customers',
         icon: <RiContactsLine />,
+        link: 'customers'
       },
     ],
   },
@@ -541,18 +549,22 @@ export const links = [
       {
         name: 'calendar',
         icon: <AiOutlineCalendar />,
+        link: 'calendar'
       },
       {
         name: 'kanban',
         icon: <BsKanban />,
+        link: 'kanban'
       },
       {
         name: 'editor',
         icon: <FiEdit />,
+        link: 'editor'
       },
       {
         name: 'color-picker',
         icon: <BiColorFill />,
+        link: 'color-picker'
       },
     ],
   },
