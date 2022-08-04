@@ -1,13 +1,13 @@
 import React from 'react';
-import { AiOutlineCalendar, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-import { FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart, FiHome, FiMapPin, } from 'react-icons/fi';
+import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock, AiFillRobot } from 'react-icons/ai';
+import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart, FiHome } from 'react-icons/fi';
 import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
-import { BiColorFill } from 'react-icons/bi';
+import { BiColorFill, BiMap } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine, RiStockLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount } from 'react-icons/md';
+import { MdOutlineSupervisorAccount, MdFoodBank,MdTimeline } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
-import { TiTick } from 'react-icons/ti';
+import { TiTick, TiUploadOutline } from 'react-icons/ti';
 import { GiLouvrePyramid, GiFireBowl } from 'react-icons/gi';
 import { GrLocation } from 'react-icons/gr';
 import avatar from './avatar.jpg';
@@ -21,18 +21,19 @@ import product4 from './product4.jpg';
 import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
-import food1 from './food1.png';
-import food2 from './food2.png';
-import food3 from './food3.png';
-import food4 from './food4.png';
-import food5 from './food5.png';
-import food6 from './food6.png';
+import product8 from './product8.jpg';
+import food1 from './food1.jpg';
+import food2 from './food2.jpg';
+import food3 from './food3.jpg';
+import food4 from './food4.jpg';
+import food5 from './food5.jpg';
+import food6 from './food6.jpg';
 
 export const verticalSlide = [
   {
     id: 1,
     image: food1,
-    link: "https://www.tasteso.com,"
+    link: "www.tasteso.com",
   },
   {
     id: 2,
@@ -43,18 +44,43 @@ export const verticalSlide = [
     image: food3
   },
   {
-      id: 3,
+      id: 4,
       image: food4
     },
     {
-      id: 3,
+      id: 5,
       image: food5
     },
     {
-      id: 3,
+      id: 6,
       image: food6
     },
-    
+    {
+      id: 1,
+      image: food1,
+      link: "www.tasteso.com",
+    },
+    {
+      id: 2,
+      image: food2,
+    },
+    {
+      id: 3,
+      image: food3
+    },
+    {
+        id: 4,
+        image: food4
+      },
+      {
+        id: 5,
+        image: food5
+      },
+      {
+        id: 6,
+        image: food6
+      },
+      
 
   ]
 
@@ -508,18 +534,13 @@ export const employeesGrid = [
 
 export const links = [
   {
-    title: 'Dashboard',
+    title: '',
     links: [
       {
         name: 'Home',
         icon: <FiHome />,
-        link: ''        
+        link: '',
       },
-      {
-        name: 'Food Map',
-        icon: <FiMapPin />,
-        link: 'map'
-      }
     ],
   },
 
@@ -527,19 +548,25 @@ export const links = [
     title: 'Pages',
     links: [
       {
-        name: 'Trending Food',
-        icon: <GiFireBowl/>,
-        link: 'orders'
+        name: 'Food Map',
+        icon: <BiMap />,
+        link: 'map',
       },
       {
-        name: 'employees',
-        icon: <IoMdContacts />,
+        name: 'Trending food',
+        icon: <GiFireBowl />,
+        link: 'food'
+      },
+      {
+        name: 'Food Cities',
+        icon: <MdFoodBank />,
         link: 'employees'
       },
       {
-        name: 'customers',
-        icon: <RiContactsLine />,
-        link: 'customers'
+        name: 'Food Bot',
+        icon: <AiFillRobot />,
+        link: 'bot',
+
       },
     ],
   },
@@ -547,65 +574,64 @@ export const links = [
     title: 'Apps',
     links: [
       {
-        name: 'calendar',
+        name: 'Food Calendar',
         icon: <AiOutlineCalendar />,
         link: 'calendar'
       },
       {
-        name: 'kanban',
-        icon: <BsKanban />,
-        link: 'kanban'
+        name: 'Timeline',
+        icon: <MdTimeline />,
+        link: 'timeline'
       },
       {
-        name: 'editor',
-        icon: <FiEdit />,
-        link: 'editor'
+        name: 'Post',
+        icon: <TiUploadOutline />,
+        link: 'submit'
       },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
-        link: 'color-picker'
-      },
+      // {
+      //   name: 'color-picker',
+      //   icon: <BiColorFill />,
+      // },
     ],
   },
-  {
-    title: 'Charts',
-    links: [
-      {
-        name: 'line',
-        icon: <AiOutlineStock />,
-      },
-      {
-        name: 'area',
-        icon: <AiOutlineAreaChart />,
-      },
+  // {
+  //   title: 'Charts',
+  //   links: [
+  //     {
+  //       name: 'line',
+  //       icon: <AiOutlineStock />,
+  //     },
+  //     {
+  //       name: 'area',
+  //       icon: <AiOutlineAreaChart />,
+  //     },
 
-      {
-        name: 'bar',
-        icon: <AiOutlineBarChart />,
-      },
-      {
-        name: 'pie',
-        icon: <FiPieChart />,
-      },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
-      {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        icon: <AiOutlineBarChart />,
-      },
-    ],
-  },
+  //     {
+  //       name: 'bar',
+  //       icon: <AiOutlineBarChart />,
+  //     },
+  //     {
+  //       name: 'pie',
+  //       icon: <FiPieChart />,
+  //     },
+  //     {
+  //       name: 'financial',
+  //       icon: <RiStockLine />,
+  //     },
+  //     {
+  //       name: 'color-mapping',
+  //       icon: <BsBarChart />,
+  //     },
+  //     {
+  //       name: 'pyramid',
+  //       icon: <GiLouvrePyramid />,
+  //     },
+  //     {
+  //       name: 'stacked',
+  //       icon: <AiOutlineBarChart />,
+  //     },
+  //   ],
+  // },
 ];
 
 export const cartData = [

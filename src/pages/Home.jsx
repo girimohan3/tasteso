@@ -3,13 +3,12 @@ import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
 import { IoIosMore } from 'react-icons/io';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-
-
 import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
 import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData, verticalSlide } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../data/product9.jpg';
 import { NavLink } from 'react-router-dom';
+// import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
@@ -21,15 +20,13 @@ const DropDown = ({ currentMode }) => (
 
 const Home = () => {
   const { currentColor, currentMode } = useStateContext();
-  
+
   // const slideLeft = () => {
   //   var slider = document.getElementById('slider');
   //   slider.scrollLeft = slider.scrollLeft - 500;
   // };
-
   // const slideRight = () => {
-  //   var slider = document.getElementById('slider');
-    
+  //   var slider = document.getElementById('slider');    
   //   slider.scrollLeft = slider.scrollLeft + 500;
   // };
 
@@ -40,19 +37,20 @@ const Home = () => {
        
       <div >
               <div  className=' relative flex items-center' >
-                   {/* <MdChevronLeft className='opacity-50 link hover:opacity-100' onClick={slideLeft} size={40} /> */}
-                <div id="slider" className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
-             
-                   {verticalSlide.map( (item) => (
-                <NavLink
-                     to={`${item.link}`}>
+                   {/* <MdChevronLeft className='opacity-50 link hover:opacity-100'
+                   onClick={slideLeft} size={40} /> */}
+                <div id="slider" className='w-full h-full overflow-x-scroll 
+                    whitespace-nowrap scroll-smooth scrollbar-hide'>             
+                   {verticalSlide.map( (item) => (   
+                    <NavLink 
+                      to={`${item.link}`}>
                       <img className='w-[200px] inline-block p-2 pointer 
-                        hover:scale-105 ease-in-out duration-300' src={item.image} alt="/"/>
-                </NavLink>  ))}  
-              </div>                
-                {/* <MdChevronRight onClick={slideRight} size={40} /> */}
-                      
-        </div>
+                    hover:scale-105 ease-in-out duration-300' src={item.image} alt="/"/>
+                    </NavLink> ))}
+                    
+                </div>
+                    {/* <MdChevronRight onClick={slideRight} size={40} /> */}
+                </div>
    
     
       </div>
@@ -117,8 +115,6 @@ const Home = () => {
           </div>
         </div>
 
-
-        
         
 
       <div className="flex flex-wrap lg:flex-nowrap justify-center ">

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
-import { BsWhatsapp } from 'react-icons/bs';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Map, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Home } from './pages';
+import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Home } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -29,35 +28,29 @@ const App = () => {
     setTimeout(() => {
       spinner.style.display = "none";
       setLoading(false);
-    }, 2000);
+    }, 3000);
   }
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
-
-          
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
             <TooltipComponent
-              content="Contact Us"
+              content="Settings"
               position="Top"
             >
               <button
                 type="button"
-                // onClick={() => setThemeSettings(true)}
-              onClick={"to={whatsapp.com}"}
-                style={{ background: 'green', borderRadius: '50%' }}
+                onClick={() => setThemeSettings(true)}
+                style={{ background: currentColor, borderRadius: '50%' }}
                 className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
               >
-                {/* <FiSettings /> */}
-                < BsWhatsapp />
+                <FiSettings />
               </button>
 
             </TooltipComponent>
           </div>
-
-
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
               <Sidebar />
@@ -84,7 +77,6 @@ const App = () => {
                 {/* dashboard  */}
                 <Route path="/" element={(<Home />)} />
                 <Route path="/home" element={(<Home />)} />
-                <Route path="/map" element={<Map />} />
 
                 {/* pages  */}
                 <Route path="/orders" element={<Orders />} />
@@ -92,7 +84,7 @@ const App = () => {
                 <Route path="/customers" element={<Customers />} />
 
                 {/* apps  */}
-                <Route path="/kanban" element={<Kanban />} />
+                {/* <Route path="/kanban" element={<Kanban />} /> */}
                 <Route path="/editor" element={<Editor />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
