@@ -10,6 +10,9 @@ import product9 from '../data/product9.jpg';
 import { NavLink } from 'react-router-dom';
 // import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
+
+
+
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
     <DropDownListComponent id="time" fields={{ text: 'Time', value: 'Id' }} 
@@ -34,8 +37,7 @@ const Home = () => {
 
   return (
     <div className="mt-24">
-       
-      <div >
+       <div >
               <div  className=' relative flex items-center' >
                    {/* <MdChevronLeft className='opacity-50 link hover:opacity-100'
                    onClick={slideLeft} size={40} /> */}
@@ -44,8 +46,8 @@ const Home = () => {
                    {verticalSlide.map( (item) => (   
                     <NavLink 
                       to={`${item.link}`}>
-                      <img className='w-[200px] inline-block p-2 pointer 
-                    hover:scale-105 ease-in-out duration-300' src={item.image} alt="/"/>
+                      <img className='w-[250px] inline-block pr-1 pointer 
+                    grow hover:brightness-50 ease-in-out duration-300' src={item.image} alt="/"/>
                     </NavLink> ))}
                     
                 </div>
@@ -55,7 +57,29 @@ const Home = () => {
     
       </div>
 
-<div className=" bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3 flex flex-wrap lg:flex-nowrap justify-center gap-3">
+      {/* <div>
+        <div className='parsection'>
+                    <h1>Hello</h1>
+        <Parallax strength={-600} bgImage={bg2}>
+          <div className='content'>
+            <div className='text-content' to>
+                      one
+            </div>
+          </div>
+        </Parallax>         
+        </div>
+
+      </div> */}
+
+<div>
+            Hi
+
+        </div>,
+<div className="mt-24 flex items-center pl-10 pr-10">
+<iframe title="hi" src="https://www.google.com/maps/d/embed?mid=1Sbotktv1nQ-koAQz1KduosJ0KLonmH8&ehbc=2E312F" width="1200" height="480"></iframe>
+</div>
+
+<div className=" bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3 flex flex-wrap lg:flex-nowrap justify-center gap-3 ">
           <div className="flex justify-between">
             <p className="text-xl font-semibold">Daily Activities</p>
             <button type="button" className="text-xl font-semibold text-gray-500">

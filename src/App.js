@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Home } from './pages';
+import { Map, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Home } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -77,8 +77,10 @@ const App = () => {
                 {/* dashboard  */}
                 <Route path="/" element={(<Home />)} />
                 <Route path="/home" element={(<Home />)} />
+              
 
                 {/* pages  */}
+                <Route path="/map" elements={<Map />}  />
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/employees" element={<Employees />} />
                 <Route path="/customers" element={<Customers />} />

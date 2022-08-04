@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { SiShopware } from 'react-icons/si';
 import { MdOutlineCancel } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
@@ -70,9 +69,12 @@ const Sidebar = () => {
           </div>
         </>
       )}
-      <img src={foodmenu1} className="pb-1 pr-1"/>
+      <div   >
+        <img src={foodmenu1} className="pb-1 pr-1"/>
       <img src={foodmenu2} className="pb-1 pr-1"/>
       <img src={foodmenu3} className="pr-1"/>
+      </div>
+      
     </div>
   );
 };
