@@ -5,16 +5,17 @@ import { employeesData, contextMenuItems, employeesGrid } from '../data/dummy';
 import { Header } from '../components';
 import { Columns } from '@syncfusion/ej2/querybuilder';
 
-const Employees = () => {
+const Cities = () => {
     return(
-       <div className="'m-2'md:m-10 p-2 md:p-10 bg-white rounded-3xl">
-        <Header category="page" title="Employees"/>
+       <div className="'m-2' p-2  bg-white rounded-3xl ">
+        <Header  category="" title=""/>
         <GridComponent id="gridcomp"
         dataSource={employeesData}
         allowPaging
         allowSorting
         toolbar={['search']}
-        width="auto">
+        width="auto"
+        >
             <ColumnsDirective>
             {employeesGrid.map((item,index)=>(
                 <ColumnDirective key={index}
@@ -28,4 +29,4 @@ const Employees = () => {
     )
 }
 
-export default Employees;
+export default Cities;

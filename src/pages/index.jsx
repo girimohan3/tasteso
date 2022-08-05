@@ -1,8 +1,6 @@
 export { default as Home } from './Home';
-export { default as Map } from './Map';
-export { default as Orders } from './Orders';
-export { default as Employees } from './Employees';
-export { default as Editor } from './Editor';
+export { default as Food } from './Food';
+export { default as Cities } from './Cities';
 export { default as Customers } from './Customers';
 export { default as ColorPicker } from './ColorPicker';
 export { default as Calendar } from './Calendar';

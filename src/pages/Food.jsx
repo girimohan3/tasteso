@@ -5,7 +5,7 @@ import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy';
 import { Header } from '../components';
 import { Columns } from '@syncfusion/ej2/querybuilder';
 
-const Orders = () => {
+const Food = () => {
     return(
        <div className="'m-2'md:m-10 p-2 md:p-10 bg-white rounded-3xl">
         <Header category="page" title="orders"/>
@@ -26,4 +26,4 @@ const Orders = () => {
     )
 }
 
-export default Orders;
+export default Food;

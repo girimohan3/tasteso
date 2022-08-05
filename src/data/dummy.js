@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineCalendar, AiFillRobot } from 'react-icons/ai';
+import { AiOutlineCalendar, AiFillRobot, AiFillAlert } from 'react-icons/ai';
 import { FiBarChart, FiCreditCard, FiStar, FiShoppingCart, FiHome } from 'react-icons/fi';
 import { BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
 import { BiMap } from 'react-icons/bi';
@@ -547,23 +547,24 @@ export const links = [
       {
         name: 'Food Map',
         icon: <BiMap />,
-        link: 'map',
+        link: 'foodmap',
       },
       {
         name: 'Trending food',
         icon: <GiFireBowl />,
-        link: 'food'
+        link: 'food',
       },
       {
         name: 'Food Cities',
         icon: <MdFoodBank />,
-        link: 'employees'
+        link: 'cities',
       },
       {
         name: 'Food Bot',
         icon: <AiFillRobot />,
         link: 'bot',
       },
+    
     ],
   },
   {
