@@ -30,11 +30,12 @@ export const verticalSlide = [
   {
     id: 1,
     image: food1,
-    link: "www.tasteso.com",
+    link: "https://www.tasteso.com",
   },
   {
     id: 2,
     image: food2,
+    link: "https://www.tasteso.com/1"
   },
   {
     id: 3,

@@ -7,6 +7,7 @@ import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Food, Calendar, Cities, Stacked, Pyramid, Customers, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Home, } from './pages';
 import './App.css';
 import Foodmap from './Foodmap.jsx';
+import Chatbot from './static/Chatbot';
 
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -47,7 +48,9 @@ const App = () => {
                 onClick={() => setThemeSettings(true)}
                 style={{ background: currentColor, borderRadius: '50%' }}
                 className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
+                
               >
+                
                 <FiSettings />
               </button>
 
@@ -79,7 +82,7 @@ const App = () => {
                 {/* dashboard  */}
                 <Route path="/" element={(<Home />)} />
                 <Route path="/home" element={(<Home />)} />
-              
+                <Route path="/chatbot" element={(<Chatbot />  )} />             
 
                 {/* pages  */}
                 <Route path="/foodmap" element={<Foodmap />} />

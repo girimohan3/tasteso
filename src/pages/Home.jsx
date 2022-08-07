@@ -43,13 +43,27 @@ const Home = () => {
                    onClick={slideLeft} size={40} /> */}
                 <div id="slider" className='w-full h-full overflow-x-scroll 
                     whitespace-nowrap scroll-smooth scrollbar-hide'>             
-                   {verticalSlide.map( (item) => (   
+                   {/* {verticalSlide.map( (item) => (   
                     <NavLink 
-                      to={`${item.link}`}>
-                      <img className='w-[250px] inline-block pr-1 pointer 
+                    to={`${item.link}`}
+                      > */}
+
+                    {/* <NavLink to={"http://www.facebook.com/"} target="_blank" rel="noopener noreferrer" > */}
+
+                        
+                      {/* <img className='w-[250px] inline-block pr-1 pointer 
                     grow hover:brightness-50 ease-in-out duration-300' src={item.image} alt="/"/>
                     </NavLink> ))}
-                    
+                     */}
+                    {verticalSlide.map( (item) => ( 
+                        <img onClick={() => window.open(item.link)} 
+                        src={item.image} alt="/"
+                        className='w-[250px] inline-block pr-1 pointer  
+                        grow hover:brightness-50 ease-in-out duration-300'
+                        />
+                      ))}
+
+
                 </div>
                     {/* <MdChevronRight onClick={slideRight} size={40} /> */}
                 </div>
