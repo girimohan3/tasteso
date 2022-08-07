@@ -7,8 +7,7 @@ import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
 import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData, verticalSlide } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../data/product9.jpg';
-import { NavLink } from 'react-router-dom';
-// import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+
 
 
 
@@ -24,68 +23,31 @@ const DropDown = ({ currentMode }) => (
 const Home = () => {
   const { currentColor, currentMode } = useStateContext();
 
-  // const slideLeft = () => {
-  //   var slider = document.getElementById('slider');
-  //   slider.scrollLeft = slider.scrollLeft - 500;
-  // };
-  // const slideRight = () => {
-  //   var slider = document.getElementById('slider');    
-  //   slider.scrollLeft = slider.scrollLeft + 500;
-  // };
-
-
 
   return (
     <div className="mt-24">
        <div >
               <div  className=' relative flex items-center' >
-                   {/* <MdChevronLeft className='opacity-50 link hover:opacity-100'
-                   onClick={slideLeft} size={40} /> */}
+                   
                 <div id="slider" className='w-full h-full overflow-x-scroll 
-                    whitespace-nowrap scroll-smooth scrollbar-hide'>             
-                   {/* {verticalSlide.map( (item) => (   
-                    <NavLink 
-                    to={`${item.link}`}
-                      > */}
-
-                    {/* <NavLink to={"http://www.facebook.com/"} target="_blank" rel="noopener noreferrer" > */}
-
-                        
-                      {/* <img className='w-[250px] inline-block pr-1 pointer 
-                    grow hover:brightness-50 ease-in-out duration-300' src={item.image} alt="/"/>
-                    </NavLink> ))}
-                     */}
+                    whitespace-nowrap scroll-smooth pointer scrollbar-hide'>             
+                   
                     {verticalSlide.map( (item) => ( 
                         <img onClick={() => window.open(item.link)} 
-                        src={item.image} alt="/"
+                        src={item.image} alt={item.alt}
                         className='w-[250px] inline-block pr-1 pointer  
                         grow hover:brightness-50 ease-in-out duration-300'
                         />
                       ))}
 
 
-                </div>
-                    {/* <MdChevronRight onClick={slideRight} size={40} /> */}
-                </div>
+                </div>                    
+             </div>
    
     
       </div>
 
-      {/* <div>
-        <div className='parsection'>
-                    <h1>Hello</h1>
-        <Parallax strength={-600} bgImage={bg2}>
-          <div className='content'>
-            <div className='text-content' to>
-                      one
-            </div>
-          </div>
-        </Parallax>         
-        </div>
-
-      </div> */}
-
-
+   
 <div className=" bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3 flex flex-wrap lg:flex-nowrap justify-center gap-3 ">
           <div className="flex justify-between">
             <p className="text-xl font-semibold">Daily Activities</p>

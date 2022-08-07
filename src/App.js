@@ -8,6 +8,7 @@ import { Food, Calendar, Cities, Stacked, Pyramid, Customers, Line, Area, Bar, P
 import './App.css';
 import Foodmap from './Foodmap.jsx';
 import Chatbot from './static/Chatbot';
+import Icon from './data/icon.svg';
 
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -40,18 +41,18 @@ const App = () => {
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
             <TooltipComponent
-              content="Settings"
+              content="food bot"
               position="Top"
             >
               <button
                 type="button"
                 onClick={() => setThemeSettings(true)}
-                style={{ background: currentColor, borderRadius: '50%' }}
-                className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
-                
+                // style={{ background: currentColor, borderRadius: '50%' }}
+                className="center text-black p-3 "
               >
-                
-                <FiSettings />
+                <img src={Icon} className="w-10 center"  />
+                Food Bot
+                           
               </button>
 
             </TooltipComponent>

@@ -9,6 +9,7 @@ import icon from '../data/icon.png';
 import foodmenu1 from '../data/foodmenu1.png';
 import foodmenu2 from '../data/foodmenu2.png';
 import foodmenu3 from '../data/foodmenu3.png';
+import logo from '../data/logo.svg';
 
 const Sidebar = () => {
   const { currentColor, activeMenu, setActiveMenu, screenSize } = useStateContext();
@@ -29,8 +30,7 @@ const Sidebar = () => {
           <div className="flex justify-between items-center">
             <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
               {/* <SiShopware /> */}
-              <img className="rounded-full w-8 h-8" src={icon} />
-                       <span>Tasteso</span>
+              <img className=" w-50 h-20" src={logo} />
             </Link>
             <TooltipComponent content="Menu" position="BottomCenter">
               <button
